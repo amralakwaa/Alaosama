@@ -153,9 +153,9 @@ export default function DashboardPage() {
                 </div>
               ))
             : [
-                { label: "كتب بدأتها", value: data?.stats.booksStarted ?? 0, icon: "📚" },
-                { label: "قيد القراءة", value: data?.stats.booksInProgress ?? 0, icon: "📖" },
-                { label: "كتب أتممتها", value: data?.stats.booksCompleted ?? 0, icon: "✅" },
+                { label: "كتب بدأتها", value: data?.stats?.booksStarted ?? 0, icon: "📚" },
+                { label: "قيد القراءة", value: data?.stats?.booksInProgress ?? 0, icon: "📖" },
+                { label: "كتب أتممتها", value: data?.stats?.booksCompleted ?? 0, icon: "✅" },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -191,7 +191,7 @@ export default function DashboardPage() {
                 </div>
               ))}
             </div>
-          ) : !data?.recentlyRead.length ? (
+          ) : !data?.recentlyRead?.length ? (
             <div className="bg-[var(--card-bg)] border border-[var(--border-color)] border-dashed rounded-[var(--radius-lg)] p-10 text-center">
               <div className="text-5xl mb-3">📖</div>
               <p className="text-[var(--text-muted)] mb-4">لم تبدأ أي كتاب بعد</p>
@@ -201,7 +201,7 @@ export default function DashboardPage() {
             </div>
           ) : (
             <div className="flex flex-col gap-3">
-              {data.recentlyRead.map((progress) => (
+              {data?.recentlyRead?.map((progress) => (
                 <a
                   key={progress.id}
                   href={`/books/${progress.book.slug}`}

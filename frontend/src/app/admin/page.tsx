@@ -33,6 +33,9 @@ export default function AdminDashboardPage() {
         const statsRes = await fetch(`${API}/admin/stats`, {
           headers: { Authorization: `Bearer ${accessToken}` },
         });
+        if (!statsRes.ok) {
+          throw new Error("فشل جلب الإحصائيات (قد لا تملك صلاحية مدير)");
+        }
         const statsData = await statsRes.json();
         setStats(statsData);
 
@@ -47,9 +50,10 @@ export default function AdminDashboardPage() {
         });
         const aiData = await aiRes.json();
         setAiInsight(aiData.text || "تعذر جلب الملخص.");
-      } catch (err) {
+      } catch (err: any) {
         console.error("Failed to load dashboard data", err);
-        setAiInsight("حدث خطأ أثناء الاتصال بمساعد الإدارة.");
+        setAiInsight(err.message || "حدث خطأ أثناء الاتصال بالخادم.");
+        setStats(null); // Ensure stats remains null on error so it doesn't crash JSX
       } finally {
         setLoading(false);
         setAiLoading(false);
