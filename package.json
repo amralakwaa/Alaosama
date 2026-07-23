@@ -4,7 +4,7 @@
   "description": "Unified frontend and backend runner",
   "scripts": {
     "postinstall": "cd frontend && npm install && cd ../backend && npm install",
-    "build": "cd frontend && npm run build && cd ../backend && npm run build && cd .. && node copy-static.js",
+    "build": "cd backend && npm run build && cd .. && node copy-static.js",
     "start": "node server.js"
   },
   "dependencies": {
