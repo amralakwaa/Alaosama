@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
 
+export const dynamic = 'force-dynamic';
+
 const API = process.env.NEXT_PUBLIC_API_URL || "/api";
 const BASE_URL = "https://amanat.ye";
 
@@ -23,7 +25,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Dynamic book pages
   try {
-    const res = await fetch(`${API}/books?limit=200`, { next: { revalidate: 3600 } });
+    const fetchUrl = API.startsWith("/") ? `http://127.0.0.1:3001${API}/books?limit=200` : `${API}/books?limit=200`;
+    const res = await fetch(fetchUrl, { next: { revalidate: 3600 } });
     const data = await res.json();
     const bookPages: MetadataRoute.Sitemap = (data.data || []).map((book: { slug: string; updatedAt: string }) => ({
       url: `${BASE_URL}/books/${book.slug}`,
@@ -36,7 +39,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Dynamic author pages
   try {
-    const res = await fetch(`${API}/authors?limit=100`, { next: { revalidate: 3600 } });
+    const fetchUrl = API.startsWith("/") ? `http://127.0.0.1:3001${API}/authors?limit=100` : `${API}/authors?limit=100`;
+    const res = await fetch(fetchUrl, { next: { revalidate: 3600 } });
     const data = await res.json();
     const authorPages: MetadataRoute.Sitemap = (data.data || []).map((author: { id: number; updatedAt: string }) => ({
       url: `${BASE_URL}/authors/${author.id}`,
