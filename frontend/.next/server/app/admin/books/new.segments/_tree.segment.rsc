@@ -1,0 +1,3 @@
+:HL["/_next/static/css/85980e79455b9d13.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"admin","param":null,"prefetchHints":0,"slots":{"children":{"name":"books","param":null,"prefetchHints":0,"slots":{"children":{"name":"new","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"Iv6ur2wrl4h-q7w9_gbEK"}

@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "images": {
+    "deviceSizes": [
+      320,
+      480,
+      640,
+      750,
+      828,
+      1080,
+      1200
+    ],
+    "imageSizes": [
+      48,
+      64,
+      96,
+      128,
+      256
+    ],
+    "path": "/_next/image",
+    "loader": "default",
+    "loaderFile": "",
+    "domains": [],
+    "disableStaticImages": false,
+    "minimumCacheTTL": 2592000,
+    "formats": [
+      "image/webp",
+      "image/avif"
+    ],
+    "maximumRedirects": 3,
+    "maximumResponseBody": 50000000,
+    "dangerouslyAllowLocalIP": false,
+    "dangerouslyAllowSVG": false,
+    "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
+    "contentDispositionType": "attachment",
+    "localPatterns": [
+      {
+        "pathname": "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/?)$",
+        "search": ""
+      }
+    ],
+    "remotePatterns": [
+      {
+        "protocol": "http",
+        "hostname": "^(?:^(?:localhost)$)$",
+        "port": "3000",
+        "pathname": "^(?:\\/public\\/uploads(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$"
+      },
+      {
+        "protocol": "https",
+        "hostname": "^(?:^(?:localhost)$)$",
+        "port": "3000",
+        "pathname": "^(?:\\/public\\/uploads(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$"
+      },
+      {
+        "protocol": "https",
+        "hostname": "^(?:(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/?)$",
+        "pathname": "^(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)\\/?)$"
+      },
+      {
+        "protocol": "http",
+        "hostname": "^(?:^(?:localhost)$)$",
+        "port": "3000",
+        "pathname": "^(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?))$"
+      },
+      {
+        "protocol": "http",
+        "hostname": "^(?:^(?:localhost)$)$",
+        "port": "3001",
+        "pathname": "^(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?))$"
+      }
+    ],
+    "qualities": [
+      75
+    ],
+    "unoptimized": false,
+    "customCacheHandler": false,
+    "sizes": [
+      320,
+      480,
+      640,
+      750,
+      828,
+      1080,
+      1200,
+      48,
+      64,
+      96,
+      128,
+      256
+    ]
+  }
+}

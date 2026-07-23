@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/author/layout,_N_T_/author/books/layout,_N_T_/author/books/new/layout,_N_T_/author/books/new/page,_N_T_/author/books/new"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/author/books/new/__PAGE__",
+    "/author/books/new",
+    "/author/books",
+    "/author",
+    "/_index",
+    "/_head"
+  ]
+}

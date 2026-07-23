@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/authors/layout,_N_T_/authors/page,_N_T_/authors"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/authors/__PAGE__",
+    "/authors",
+    "/_index",
+    "/_head"
+  ]
+}

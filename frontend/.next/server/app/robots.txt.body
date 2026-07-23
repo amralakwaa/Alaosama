@@ -1,0 +1,29 @@
+User-Agent: *
+Allow: /
+Allow: /books
+Allow: /books/
+Allow: /authors
+Allow: /authors/
+Allow: /categories
+Allow: /categories/
+Allow: /services
+Allow: /search
+Allow: /about
+Allow: /contact
+Allow: /publishing
+Disallow: /admin
+Disallow: /admin/
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /profile
+Disallow: /author/
+Disallow: /api/
+Disallow: /login
+Disallow: /register
+
+User-Agent: Googlebot
+Allow: /books/
+Allow: /authors/
+Allow: /services/
+
+Sitemap: https://amanat.ye/sitemap.xml

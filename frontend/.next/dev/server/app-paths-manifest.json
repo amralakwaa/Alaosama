@@ -1,0 +1,9 @@
+{
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
+  "/login/page": "app/login/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/admin/settings/page": "app/admin/settings/page.js",
+  "/books/[slug]/page": "app/books/[slug]/page.js",
+  "/books/page": "app/books/page.js"
+}
