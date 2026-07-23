@@ -6,7 +6,7 @@ import { useAuth } from "@/lib/auth/auth-context";
 import { Button, Input } from "@/components/ui";
 import Link from "next/link";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "/api";
 
 export default function AdminAddNewBookPage() {
   const { accessToken } = useAuth();

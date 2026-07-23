@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "/api";
 const BASE_URL = "https://amanat.ye";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

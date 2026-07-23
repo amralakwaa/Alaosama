@@ -1,44 +1,39 @@
 /** @type {import('next').NextConfig} */
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
-const parsedUrl = new URL(API_URL);
-const API_HOST = parsedUrl.hostname;
-const API_PORT = parsedUrl.port;
 
 const nextConfig = {
   images: {
     formats: ["image/webp", "image/avif"],
     remotePatterns: [
-      {
-        protocol: "http",
-        hostname: API_HOST,
-        port: API_PORT || "",
-        pathname: "/public/uploads/**",
-      },
+      // Production domain
       {
         protocol: "https",
-        hostname: API_HOST,
-        port: API_PORT || "",
-        pathname: "/public/uploads/**",
+        hostname: "yellowgreen-bear-642887.hostingersite.com",
+        pathname: "/**",
       },
       // Allow any https image (for external covers/avatars)
       {
         protocol: "https",
         hostname: "**",
       },
-      // Explicitly allow localhost on port 3000 as fallback
+      // Localhost fallbacks for development
       {
         protocol: "http",
         hostname: "localhost",
         port: "3000",
         pathname: "/**",
       },
-      // Explicitly allow localhost on port 3001 as fallback
       {
         protocol: "http",
         hostname: "localhost",
         port: "3001",
         pathname: "/**",
-      }
+      },
+      {
+        protocol: "http",
+        hostname: "127.0.0.1",
+        port: "3001",
+        pathname: "/**",
+      },
     ],
     deviceSizes: [320, 480, 640, 750, 828, 1080, 1200],
     imageSizes: [48, 64, 96, 128, 256],

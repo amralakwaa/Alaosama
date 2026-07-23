@@ -3,7 +3,7 @@
 import NextImage, { ImageProps as NextImageProps } from "next/image";
 import { useState } from "react";
 
-const API_BASE = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api").replace("/api", "");
+const API_BASE = (process.env.NEXT_PUBLIC_API_URL || "/api").replace("/api", "");
 
 interface OptimizedImageProps extends Omit<NextImageProps, "src"> {
   src: string | null | undefined;

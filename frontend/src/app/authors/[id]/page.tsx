@@ -7,7 +7,7 @@ import BookCard from "@/components/ui/BookCard";
 import { useAuth } from "@/lib/auth/auth-context";
 import { Button } from "@/components/ui";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "/api";
 
 export default function AuthorProfilePage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params);

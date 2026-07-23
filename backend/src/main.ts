@@ -8,9 +8,15 @@ async function bootstrap() {
   // Global prefix for all API routes
   app.setGlobalPrefix('api');
 
-  // Enable CORS for frontend
+  // Enable CORS for frontend (development & production)
   app.enableCors({
-    origin: ['http://localhost:3001'],
+    origin: [
+      'http://localhost:3000',
+      'http://localhost:3001',
+      'http://localhost:3002',
+      'https://yellowgreen-bear-642887.hostingersite.com',
+      /\.hostingersite\.com$/,
+    ],
     credentials: true,
   });
 

@@ -7,7 +7,7 @@ import { useAuth } from "@/lib/auth/auth-context";
 import { useSettings } from "@/lib/settings/settings-context";
 import InstallAppButton from "./InstallAppButton";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "/api";
 
 const PUBLIC_LINKS = [
   { label: "المكتبة",   href: "/books" },

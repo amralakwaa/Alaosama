@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useSettings } from "@/lib/settings/settings-context";
 import InstallAppButton from "./InstallAppButton";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "/api";
 
 interface Settings {
   site_name?: string;

@@ -4,7 +4,7 @@ node_modules/
 .pnp.js
 
 # ─── Build output ───────────────────────────────────────
-frontend/.next/
+# frontend/.next/
 frontend/out/
 backend/dist/
 

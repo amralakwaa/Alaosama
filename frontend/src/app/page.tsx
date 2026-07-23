@@ -7,7 +7,7 @@ import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import BookCard from "@/components/ui/BookCard";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "/api";
 
 function useReveal(threshold = 0.1) {
   const ref = useRef<HTMLElement>(null);

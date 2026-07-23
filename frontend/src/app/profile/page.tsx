@@ -6,7 +6,7 @@ import { useRequireAuth } from "@/lib/auth/use-auth-redirect";
 import Navbar from "@/components/layout/Navbar";
 import { Button, Input } from "@/components/ui";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+const API = process.env.NEXT_PUBLIC_API_URL || "/api";
 
 export default function ProfilePage() {
   const { user, accessToken } = useAuth();
