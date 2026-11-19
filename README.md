@@ -1,61 +1,68 @@
-# 🌌 Project Orion — Digital Content Platform
+<div dir="rtl">
 
-> Premium Arabic digital library with AI-powered discovery.
+# أمانات ومكتبة أسامة | Project Orion
 
-## Tech Stack
+**منصة مكتبة رقمية عربية:** كتب ومؤلفون وتصنيفات ومراجعات، وطلبات نشر للمؤلفين، وبحث، ومساعد ذكاء اصطناعي، مع لوحة إدارة.
 
-| Layer | Technology |
-|---|---|
-| **Frontend** | Next.js 14, TypeScript, Tailwind CSS |
-| **Backend** | NestJS, TypeORM, MySQL 8 |
-| **Cache** | Redis 7 |
-| **Search** | Elasticsearch (Sprint 8) |
-| **Cloud** | AWS (ECS Fargate, S3, CloudFront) |
+</div>
 
-## Getting Started
+---
 
-### Prerequisites
-- **Node.js** >= 18
-- **Docker** & Docker Compose
-- **npm** >= 9
+## ماذا يحتوي المشروع؟ | What's inside
 
-### 1. Start Infrastructure
+<div dir="rtl">
+
+### الواجهة (Next.js)
+- صفحات الكتب والمؤلفين والتصنيفات، والبحث، والخدمات.
+- تسجيل حساب ودخول وملف شخصي ولوحة للمستخدم.
+- **مسار النشر:** يقدّم المؤلف طلب نشر ويتابع حالته.
+- لوحة إدارة، وخريطة موقع و`robots` و`manifest` يولّدها Next.js.
+
+### الخادم (NestJS)
+وحدات منفصلة لكل مجال: `auth` و`users` و`books` و`authors` و`categories` و`reviews` و`publishing-requests` و`notifications` و`upload` و`ai` و`admin` و`settings` و`services` و`health`.
+
+### البنية
+- `docker-compose.yml` يشغّل MySQL وRedis وAdminer للتطوير المحلي.
+
+</div>
+
+## التقنيات | Tech stack
+
+| | |
+| --- | --- |
+| Frontend | Next.js 16, React 19, TypeScript, Tailwind CSS 4 |
+| Backend | NestJS 11, TypeORM, TypeScript |
+| Data | MySQL, Redis |
+| Dev infra | Docker Compose |
+
+## التشغيل محلياً | Local setup
+
 ```bash
+git clone https://github.com/amralakwaa/Alaosama.git
+cd Alaosama
 docker-compose up -d
-```
-This starts MySQL (port 3306), Redis (port 6379), and Adminer (port 8080).
 
-### 2. Start Backend
-```bash
 cd backend
 npm install
 npm run start:dev
-```
-API available at `http://localhost:3000/api/health`
 
-### 3. Start Frontend
-```bash
-cd frontend
+cd ../frontend
 npm install
 npm run dev
 ```
-App available at `http://localhost:3001`
 
-### Database Access
-Open [http://localhost:8080](http://localhost:8080) (Adminer)
-- **Server:** `orion_mysql`
-- **Username:** `orion_user`
-- **Password:** `orion_pass_2024`
-- **Database:** `orion_db`
+<div dir="rtl">
 
-## Project Structure
-```
-project_orion/
-├── frontend/          # Next.js 14 (App Router)
-├── backend/           # NestJS (Modular Monolith)
-├── docker-compose.yml # Dev infrastructure
-└── README.md
-```
+الخادم على `http://localhost:3000/api/health`، والواجهة على `http://localhost:3001`. بيانات قاعدة البيانات المحلية موجودة في `docker-compose.yml`.
 
-## License
-Private — All rights reserved.
+---
+
+## المطوّر | Developer
+
+صمّم المنصة وطوّرها **عمر بلال الأكوع** ([@amralakwaa](https://github.com/amralakwaa)).
+
+## الحقوق
+
+جميع الحقوق محفوظة.
+
+</div>
